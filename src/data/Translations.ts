@@ -98,6 +98,54 @@ export const Projects : TranslatableText = new TranslatableText
 
 export const Language : TranslatableText = new TranslatableText
 ({
-    sk : "Jazyk:",  
-    en : "Language:"
+    sk : "Jazyk",  
+    en : "Language"
+});
+
+export const ProjectsAll : TranslatableText = new TranslatableText
+({
+    sk : "Všetky moje projekty nájdete na mojom GitHub-e (odkaz v hlavičke)...",  
+    en : "All my projects can be found on my GitHub (link in the header)..."
+});
+
+export const Link : TranslatableText = new TranslatableText
+({
+    sk : "Odkaz",  
+    en : "Link"
+});
+
+export const For : TranslatableText = new TranslatableText
+({
+    sk : "Pre",  
+    en : "For"
+});
+
+export const PersonalProject : TranslatableText = new TranslatableText
+({
+    sk : "Osobný projekt",  
+    en : "Personal project"
+});
+
+export const Languages : TranslatableText = new TranslatableText
+({
+    sk : "Jazyky",  
+    en : "Languages"
+});
+
+export const Technologies : TranslatableText = new TranslatableText
+({
+    sk : "Technológie",  
+    en : "Technologies"
+});
+
+export const Programs : TranslatableText = new TranslatableText
+({
+    sk : "Programy",  
+    en : "Programs"
+});
+
+export const Description : TranslatableText = new TranslatableText
+({
+    sk : "Popis",  
+    en : "Description"
 });
