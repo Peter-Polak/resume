@@ -123,13 +123,14 @@ export interface IProjects
 
 export interface IProject
 {
-    name : TranslatableText
+    name : string
     link : string
     languages : Array<string>
     technologies : Array<string>
     programs : Array<string>
-    for : TranslatableText
+    for : string
     description : TranslatableText
+    pagebreak? : boolean
 }
 
 //#endregion
