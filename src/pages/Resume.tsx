@@ -46,17 +46,19 @@ class Resume extends Component<IResumeProps, IResumeState>
                 <Content>
                     <Main>
                         <Education data={person.education}/>
-                        <WorkExperience data={person.workExperience}/>
                         <LanguageSkills data={person.languageSkills}/>
+                        <WorkExperience data={person.workExperience}/>
                         <Projects data={person.projects}/>
                     </Main>
                     <Sidebar>
                         <TechnicalSkills data={person.technicalSkills}/>
-                    </Sidebar>                
+                    </Sidebar>
+                                
                 </Content>
                 
                 <LanguageSelect/>
                 <PrintButton fileName={`${person.personalInformation.surname}-${person.personalInformation.name}_Resume_${language}`}/>
+                
             </div>
         );
     }
@@ -65,19 +67,21 @@ class Resume extends Component<IResumeProps, IResumeState>
 const Content = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 15px;
+    margin: 10px;
+
+    @media only screen and (max-width: 768px)
+    {
+        flex-direction: column;
+    }
 `;
 
 const Main = styled.main`
-    display: flex;
-    flex-direction: column;
-    flex: 2;
-    margin-right: 25px;
+    margin-right: 5px;
+    width: 70%;
 `;
 
 const Sidebar = styled.div`
-    flex: 1;
-    /* padding-right: 50px; */
+    width: 30%;
 `;
 
 export default Resume;
