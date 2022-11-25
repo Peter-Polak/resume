@@ -47,7 +47,7 @@ class Section extends Component<ISectionProps, ISectionState>
 }
 
 const Container = styled.section`
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 `;
 
 const StyledIcon = styled(MaterialIcon)`
@@ -61,7 +61,7 @@ const Heading = styled.h2`
     display: flex;
     align-items: center;
     
-    margin: 0 0 0px 0;
+    margin: 0 0 10px 0;
 `;
 
 const Text = styled.span`

@@ -72,7 +72,7 @@ const School = styled.div`
 `;
     
 const SchoolYears = styled.span`
-    width: 150px;
+    width: 100px;
 `;
 
 const SchoolDetails = styled.div`

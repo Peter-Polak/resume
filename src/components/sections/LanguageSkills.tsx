@@ -68,7 +68,7 @@ const Language = styled.div`
 `;
     
 const LanguageName = styled.span`
-    width: 150px;
+    width: 125px;
 `;
 
 const LanguageDetails = styled.div`

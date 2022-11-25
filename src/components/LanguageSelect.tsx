@@ -74,7 +74,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     margin: 10px;
-    padding: 10px 50px;
+    padding: 10px 25px;
     
     color: ${props => props.theme.color.background};
     

@@ -64,7 +64,6 @@ const Info = styled.div`
 
 const Link = styled.a`
     color: white;
-    text-decoration: none;
 `;
 
 export default ContactInformation;
