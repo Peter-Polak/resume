@@ -83,6 +83,27 @@ const GlobalStyle = createGlobalStyle`
     {
         background: ${props => props.theme.color.primary.dark};
     }
+    
+    #react-logo
+    {
+        width: 15px;
+        height: 15px;
+        vertical-align: middle;
+        margin-right: 2.5px;
+    }
+
+    #footer
+    {
+        /* position: absolute; */
+        display: flex;
+        flex-direction: column;
+
+        margin: 50px 0;
+
+        text-align: center;
+        font-size: smaller;
+        font-weight: bold;
+    }
 `;
  
 export default GlobalStyle;
