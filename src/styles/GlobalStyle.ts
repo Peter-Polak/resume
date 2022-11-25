@@ -6,15 +6,29 @@ const GlobalStyle = createGlobalStyle`
 
     @media print
     {    
+        body
+        {
+            height: calc(29.7cm * 2 - 1px);
+        }
+
         .no-print, .no-print *
         {
             display: none !important;
         }
+        
+        a
+        {
+            text-decoration: none;
+        }
     }
-    
+
     @page
     {
         size: 21cm 29.7cm;
+        /* size: A4; */
+        background-color: ${props => props.theme.color.background};
+        margin: 0;
+        padding: 2mm;  
     }
 
     body
@@ -27,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 12px;
         font-family: Roboto, Arial, Helvetica, sans-serif;
         
-        background-color: ${props => props.theme.color.background};
+        background-color: ${props => props.theme.color.background} !important;
     }
     
     ul
@@ -49,6 +63,11 @@ const GlobalStyle = createGlobalStyle`
         
         cursor: pointer;
         user-select: none;
+    }
+
+    p
+    {
+        margin: 0 0 10px 0;
     }
     
     a
