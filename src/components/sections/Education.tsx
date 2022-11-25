@@ -82,6 +82,7 @@ const SchoolDetails = styled.div`
 
 const SchoolName = styled.span`
     font-weight: 700;
+    color: ${ p => p.theme.color.primary.light };
 `;
 
 const SchoolFaculty = styled.span`

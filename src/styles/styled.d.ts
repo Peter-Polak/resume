@@ -2,7 +2,7 @@ import { DefaultTheme } from "styled-components";
 
 interface Color
 {
-    ligth : string,
+    light : string,
     normal : string,
     dark : string
 }

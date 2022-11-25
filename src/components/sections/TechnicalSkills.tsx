@@ -33,7 +33,7 @@ class TechnicalSkills extends Component<ITechnicalSkillsProps, ITechnicalSkillsS
             {
                 return (
                     <Category key={category.name.Translate()}>
-                        <h3>{category.name.Translate()}</h3>
+                        <CategoryHeader>{category.name.Translate()}</CategoryHeader>
                         <ul>
                          {
                             category.skills.expert !== undefined ? 
@@ -159,9 +159,12 @@ const FamiliarSkillsContainer = styled.ul`
 `;
 
 
-
 const Category = styled.div`
     margin-right: 10px;
+`;
+
+const CategoryHeader = styled.h3`
+    color: ${ p => p.theme.color.primary.light };
 `;
 
 const SkillItem = styled.li`

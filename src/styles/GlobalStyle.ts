@@ -53,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
     
     a
     {
-        color: ${props => props.theme.color.primary.normal};
+        color: ${props => props.theme.color.primary.light};
     }
     
     /* width */
