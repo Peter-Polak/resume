@@ -47,11 +47,11 @@ class Section extends Component<ISectionProps, ISectionState>
 }
 
 const Container = styled.section`
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 `;
 
 const StyledIcon = styled(MaterialIcon)`
-    margin: 10px;
+    margin: 0 10px 0 0;
     background-color: ${props => props.theme.color.primary.normal};
     border-radius: 50px;
     padding: 7px;

@@ -1,6 +1,6 @@
 import { Component } from "react";
 import styled from "styled-components";
-import { ExpertSkill, FamiliarSkill, FluentSkill, TechnicalSkills as Title } from "../../data/Translations";
+import { ExpertSkill, TechnicalSkills as Title } from "../../data/Translations";
 
 import { ISectionComponent, ITechnicalSkill, ITechnicalSkills } from "../../utilities/Types";
 import Section from "../Section";
@@ -141,30 +141,35 @@ const Content = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-`;
 
-const Lists = styled.ul`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-`;
-
-const FamiliarSkillsContainer = styled.ul`
-    display: inline;
-
-    & li
+    @media only screen and (max-width: 768px)
     {
-        float: left;
+        flex-direction: row;
     }
 `;
 
+// const Lists = styled.ul`
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+// `;
+
+// const FamiliarSkillsContainer = styled.ul`
+//     display: inline;
+
+//     & li
+//     {
+//         float: left;
+//     }
+// `;
 
 const Category = styled.div`
-    margin-right: 10px;
+    margin: 0 20px 10px 0;
 `;
 
 const CategoryHeader = styled.h3`
     color: ${ p => p.theme.color.primary.light };
+    margin: 0 0 10px 0;
 `;
 
 const SkillItem = styled.li`

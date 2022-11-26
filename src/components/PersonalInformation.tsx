@@ -1,6 +1,5 @@
 import { Component } from "react";
 import styled from "styled-components";
-import { TranslatableText } from "../utilities/TranslatableText";
 
 import { IContactInformation } from "../utilities/Types";
 import MaterialIcon, { MaterialIconsType } from "./MaterialIcon";
@@ -37,10 +36,14 @@ class ContactInformation extends Component<IContactInformationProps, IContactInf
         
         return (
             <Container className={className}>
-                <Info>{this.getIconComponent("home")}{address.Translate()}</Info>
-                <Info>{this.getIconComponent("phone")}{phoneNumber}</Info>
-                <Info>{this.getIconComponent("alternate_email")}<Link href={`mailto:${emailAddress}`}>{emailAddress}</Link></Info>
-                <Info>{this.getIconComponent("public")}<Link href={websiteUrl} target="_blank">{websiteUrl}</Link></Info>
+                <WrapGroup>
+                    <Info>{this.getIconComponent("home")}{address.Translate()}</Info>
+                    <Info>{this.getIconComponent("phone")}{phoneNumber}</Info>
+                </WrapGroup>
+                <WrapGroup>
+                    <Info>{this.getIconComponent("alternate_email")}<Link href={`mailto:${emailAddress}`}>{emailAddress}</Link></Info>
+                    <Info>{this.getIconComponent("public")}<Link href={websiteUrl} target="_blank">{websiteUrl}</Link></Info>
+                </WrapGroup>
                 { birthday ? <Info>{this.getIconComponent("cake")}{birthday}</Info> : null }
             </Container>
         );
@@ -48,6 +51,14 @@ class ContactInformation extends Component<IContactInformationProps, IContactInf
 }
 
 const Container = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+`;
+
+const WrapGroup = styled.span`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

@@ -1,9 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
  
 const GlobalStyle = createGlobalStyle`
-    @import url(https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp);
-    @import url(https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto);
-
     @media print
     {    
         body
@@ -38,10 +35,11 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         
         color: ${props => props.theme.color.text};
-        font-size: 12px;
-        font-family: Roboto, Arial, Helvetica, sans-serif;
+        font-size: 10.5px;
+        font-family: Roboto Mono, Arial, Helvetica, sans-serif;
+        word-spacing: -1px;
         
-        background-color: ${props => props.theme.color.background} !important;
+        background-color: ${props => props.theme.color.background};
     }
     
     ul
@@ -122,6 +120,24 @@ const GlobalStyle = createGlobalStyle`
         text-align: center;
         font-size: smaller;
         font-weight: bold;
+    }
+
+    #loading-overlay
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+
+        font-size: xx-large;
+        color: ${props => props.theme.color.primary.light};
+        
+        background-color: ${props => props.theme.color.background};
+        z-index: 9999;
     }
 `;
  

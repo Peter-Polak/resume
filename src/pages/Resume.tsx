@@ -67,7 +67,7 @@ class Resume extends Component<IResumeProps, IResumeState>
 const Content = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 10px;
+    margin: 20px 20px;
 
     @media only screen and (max-width: 768px)
     {
@@ -76,12 +76,17 @@ const Content = styled.div`
 `;
 
 const Main = styled.main`
-    margin-right: 5px;
+    margin-right: 15px;
     width: 70%;
+
+    @media only screen and (max-width: 768px)
+    {
+        width: auto;
+    }
 `;
 
 const Sidebar = styled.div`
-    width: 30%;
+    width: auto;
 `;
 
 export default Resume;

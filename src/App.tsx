@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 
 import GlobalStyle from "./styles/GlobalStyle";
-import { darkTheme, lightTheme } from './styles/Themes';
+import { darkTheme } from './styles/Themes';
 
 import Resume from './pages/Resume';
 import { person } from "./data/Person";

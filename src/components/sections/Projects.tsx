@@ -29,9 +29,9 @@ class Projects extends Component<IProjectsProps, IProjectsState>
     getProject(project : IProject) : JSX.Element
     {
         return (
-            <>
+            <div key={project.name}>
                 {project.pagebreak ? <PageBreak/> : null}
-                <ProjectContainer key={project.name}>
+                <ProjectContainer>
                     <Name>{project.name}</Name>
                     <P><Label>{Link.Translate()}:</Label> <StyledLink href={project.link}>{project.link}</StyledLink></P>
                     <P><Label>{For.Translate()}:</Label>{project.for}</P>
@@ -40,14 +40,14 @@ class Projects extends Component<IProjectsProps, IProjectsState>
                     <P><Label>{Programs.Translate()}:</Label>{project.programs.join(", ")}</P>
                     <P><Label>{Description.Translate()}:</Label>{project.description.Translate()}</P>
                 </ProjectContainer>
-            </>
+            </div>
         );
     }
 
     getProjects(projects : Array<IProject>): Array<JSX.Element>
     {
         return projects.map(
-            (project, index) => this.getProject(project)
+            (project) => this.getProject(project)
         );
     }
 
@@ -71,7 +71,7 @@ const ProjectsContent = styled.div`
 
 const ProjectContainer = styled.div`
     padding: 15px 25px;
-    margin: 10px 0px;
+    margin: 20px 0px;
     border: 2px solid ${p => p.theme.color.primary.normal};
     border-radius: 10px;
     
@@ -86,13 +86,13 @@ const ProjectContainer = styled.div`
 const PageBreak = styled.div`
      @media print 
      {
-        height: 20px;
+        height: 40px;
         page-break-before: always;
      }
 `;
 
 const P = styled.p`
-    margin: 0 0 7.5px 0;
+    margin: 0 0 5px 0;
 `;
 
 const Label = styled.span`

@@ -2,7 +2,6 @@ import { Component } from "react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import { Language } from "../data/Translations";
-import { defaultLanguage } from "../utilities/Settings";
 import { TranslatableText } from "../utilities/TranslatableText";
 import { SupportedLanguage } from "../utilities/Types";
 

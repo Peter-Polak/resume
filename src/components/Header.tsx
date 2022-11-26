@@ -28,7 +28,7 @@ class Header extends Component<IHeaderProps, IHeaderState>
 
     render() : JSX.Element
     {
-        const { name, surname, birthday } = this.props.personalInformation;
+        const { name, surname } = this.props.personalInformation;
         const { address, phoneNumber, emailAddress, websiteUrl } = this.props.contactInformation;
         
         return (
@@ -51,14 +51,14 @@ const Container = styled.header`
     flex-direction: column;
     align-items: center;
     
-    padding: 25px 25px;
+    padding: 20px 25px;
     
     background-color: ${props => props.theme.color.primary.normal};
 `;
 
 const Heading = styled.h1`
     flex: 6;
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
     
     color: white;
     font-size: 50px;
