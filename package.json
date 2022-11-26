@@ -1,5 +1,6 @@
 {
   "name": "resume",
+  "homepage" : "https://peter-polak.github.io/resume/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
