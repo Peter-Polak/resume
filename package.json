@@ -25,8 +25,8 @@
     "build": "set \"GENERATE_SOURCEMAP=false\" && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build && rmdir /s /q \"build-repo/docs\" && move \"build\" \"build-repo/docs\"",
+    "deploy": "cd \"build-repo\" && git add . && git commit -m \"Update build\" && git push origin main:build"
   },
   "eslintConfig": {
     "extends": [
