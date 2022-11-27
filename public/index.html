@@ -12,11 +12,37 @@
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Resume</title>
+
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp);
+      @import url(https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto|Roboto+Mono);
+
+      #loading-overlay
+      {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          position: fixed;
+          width: 100vw;
+          height: 100vh;
+
+          font-family: Roboto Mono, Arial, Helvetica, sans-serif;
+          font-size: xx-large;
+          color: #2f90c9;
+
+          background-color: #1a1a1a;
+          z-index: 9999;
+      }
+    </style>
   </head>
   
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root"><div id="loading-overlay" class="visible">
+      Loading...
+    </div></div>
     <footer id="footer">
       <p><img src="%PUBLIC_URL%/react-icon.svg" id="react-logo"/>Made with React </p>
       <p>Online: <a href="https://peter-polak.github.io/resume/">https://peter-polak.github.io/resume/</a></p>
