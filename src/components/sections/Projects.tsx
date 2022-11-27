@@ -33,7 +33,7 @@ class Projects extends Component<IProjectsProps, IProjectsState>
                 {project.pagebreak ? <PageBreak/> : null}
                 <ProjectContainer>
                     <Name>{project.name}</Name>
-                    <P><Label>{Link.Translate()}:</Label> <StyledLink href={project.link}>{project.link}</StyledLink></P>
+                    <P><Label>{Link.Translate()}:</Label> <StyledLink href={project.link} target="_blank">{project.link}</StyledLink></P>
                     <P><Label>{For.Translate()}:</Label>{project.for}</P>
                     <P><Label>{Languages.Translate()}:</Label>{project.languages.join(", ")}</P>
                     <P><Label>{Technologies.Translate()}:</Label>{project.technologies.join(", ")}</P>
@@ -60,7 +60,7 @@ class Projects extends Component<IProjectsProps, IProjectsState>
                 <ProjectsContent>
                     { this.getProjects(data) }
                 </ProjectsContent>
-                <Footer href="https://github.com/Peter-Polak?tab=repositories">{ProjectsAll.Translate()}</Footer>
+                <Footer href="https://github.com/Peter-Polak?tab=repositories" target="_blank">{ProjectsAll.Translate()}</Footer>
             </Section>
         );
     }
