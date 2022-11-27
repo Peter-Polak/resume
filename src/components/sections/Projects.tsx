@@ -103,8 +103,13 @@ const Label = styled.span`
 
 const Name = styled.p`
     margin: 0 0 10px 0;
+    
     font-size: medium;
     font-weight: bold;
+    font-family: 'Bebas Neue';
+    letter-spacing: 2px;
+    word-spacing: 2px;
+
     color: ${ p => p.theme.color.primary.light };
 `;
 

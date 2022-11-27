@@ -61,13 +61,20 @@ const Heading = styled.h2`
     display: flex;
     align-items: center;
     
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
 `;
 
-const Text = styled.span`
+const Text = styled.h2`
     position: relative;
     flex: 1;
-    
+
+    margin: 0 0 0 0;
+
+    font-family: Bebas Neue;
+    font-size: large;
+    letter-spacing: 2.5px;
+    word-spacing: 2px;
+
     &:after
     {
         content: "";
